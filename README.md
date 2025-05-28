@@ -13,3 +13,23 @@ This is a simple but complete Data Engineering pipeline built with Python. It in
 - ✅ Optional analysis in Jupyter
 
 ## 📦 Project Structure
+
+## 🏁 How to Run
+
+data/
+├── raw/ # Raw CSV files
+└── processed/ # Cleaned/transformed CSVs
+
+src/
+├── ingest.py
+├── transform.py
+├── load.py
+└── utils.py
+
+flows/
+└── pipeline.py # Prefect Flow
+
+1. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
