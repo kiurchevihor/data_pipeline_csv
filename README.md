@@ -14,7 +14,7 @@ This is a simple but complete Data Engineering pipeline built with Python. It in
 
 ## 📦 Project Structure
 
-## 🏁 How to Run
+```
 
 data/
 ├── raw/ # Raw CSV files
@@ -29,7 +29,55 @@ src/
 flows/
 └── pipeline.py # Prefect Flow
 
+```
+
+## 🏁 How to Run
+
 1. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
+
+````
+
+2. Run the pipeline with proper module resolution:
+
+   ```bash
+   PYTHONPATH=. python3 flows/pipeline.py
+   ```
+
+### ⚙️ IDE Setup (Optional)
+
+If you're using an IDE like VS Code or PyCharm, set the `PYTHONPATH` so it resolves modules correctly.
+
+#### VS Code
+
+Create a `.vscode/launch.json`:
+
+```json
+{
+  "configurations": [
+    {
+      "name": "Run Pipeline",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/flows/pipeline.py",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}"
+      }
+    }
+  ]
+}
+```
+
+#### PyCharm
+
+- Go to **Run > Edit Configurations...**
+- Add a Python configuration with:
+
+  - Script: `flows/pipeline.py`
+  - Working directory: the project root
+  - Environment variable: `PYTHONPATH=.`
+
+---
+````
