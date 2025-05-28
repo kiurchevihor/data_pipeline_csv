@@ -1,5 +1,5 @@
 from prefect import flow, task
-from src.ingest import ingest_csv
+from src.ingest import ingest_data
 from src.transform import clean_data
 from src.load import load_to_sqlite
 
@@ -10,7 +10,7 @@ TABLE_NAME = "products"
 
 @task
 def ingest_task():
-    return ingest_csv(CSV_PATH)
+    return ingest_data(CSV_PATH)
 
 
 @task
