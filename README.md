@@ -48,13 +48,14 @@ flows/
 
 ### ⚙️ IDE Setup (Optional)
 
-If you're using an IDE like VS Code or PyCharm, set the `PYTHONPATH` so it resolves modules correctly.
+If you're using an IDE like VS Code or PyCharm, set the `PYTHONPATH` so it resolves modules
+correctly.
 
 #### VS Code
 
 Create a `.vscode/launch.json`:
 
-```json
+json
 {
   "configurations": [
     {
