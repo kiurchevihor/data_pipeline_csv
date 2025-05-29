@@ -271,7 +271,7 @@ async def list_csv_files(directory: str = "data/raw"):
         raise HTTPException(
             status_code=500, detail=f"Error listing files: {str(e)}")
 
-# Web Interface (упрощенный HTML)
+# Web Interface
 
 
 @app.get("/", response_class=HTMLResponse)
